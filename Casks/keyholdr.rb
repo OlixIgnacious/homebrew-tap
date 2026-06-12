@@ -22,11 +22,13 @@ cask "keyholdr" do
   zap trash: "~/Library/Application Support/com.olixstudios.Keyholdr"
 
   caveats <<~EOS
-    Keyholdr is not yet notarized, so macOS will block the first launch.
+    Keyholdr is not yet notarized, so Gatekeeper blocks both the app and the
+    bundled CLI until you clear the quarantine flag once:
 
-    On macOS 15 (Sequoia) and later: open the app once, then allow it under
-      System Settings → Privacy & Security → "Open Anyway"
-    On macOS 13–14: right-click Keyholdr.app → Open
+      xattr -dr com.apple.quarantine "#{appdir}/Keyholdr.app"
+
+    (Or per binary: app → System Settings → Privacy & Security → "Open
+    Anyway"; the CLI is killed on launch until allowed the same way.)
 
     The `keyholdr` CLI is linked onto your PATH. The first read of each key
     shows a one-time macOS Keychain consent — choose "Always Allow".
