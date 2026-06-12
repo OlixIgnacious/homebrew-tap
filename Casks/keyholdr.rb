@@ -17,6 +17,7 @@ cask "keyholdr" do
   depends_on arch: :arm64
 
   app "Keyholdr.app"
+  binary "#{appdir}/Keyholdr.app/Contents/MacOS/keyholdr-cli", target: "keyholdr"
 
   zap trash: "~/Library/Application Support/com.olixstudios.Keyholdr"
 
@@ -26,6 +27,9 @@ cask "keyholdr" do
     On macOS 15 (Sequoia) and later: open the app once, then allow it under
       System Settings → Privacy & Security → "Open Anyway"
     On macOS 13–14: right-click Keyholdr.app → Open
+
+    The `keyholdr` CLI is linked onto your PATH. The first read of each key
+    shows a one-time macOS Keychain consent — choose "Always Allow".
 
     Secrets live in the macOS Keychain and survive uninstalls by design;
     `brew uninstall --zap keyholdr` removes the metadata file but not the
