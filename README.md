@@ -1,8 +1,11 @@
 # Olix Studios Homebrew Tap
 
 ```bash
-brew install --cask olixignacious/tap/keyholdr
+brew install --cask olixignacious/tap/keyholdr   # install
+brew upgrade --cask keyholdr                     # update
 ```
+
+Casks here are bumped automatically by each app's release CI.
 
 | Cask | Description |
 |---|---|
