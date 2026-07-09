@@ -6,7 +6,7 @@ cask "keyholdr" do
       verified: "github.com/OlixIgnacious/keyholdr/"
   name "Keyholdr"
   desc "Native menu bar vault for API keys with Touch ID unlock"
-  homepage "https://olixignacious.github.io/keyholdr/"
+  homepage "https://olixignacious.github.io/keyholdr-site/"
 
   livecheck do
     url :url
