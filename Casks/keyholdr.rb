@@ -1,6 +1,6 @@
 cask "keyholdr" do
-  version "1.5.0"
-  sha256 "6d740811551a0d0878a9ba2854700f143fd7d0b347b972d360f30eccf7ff7fe0"
+  version "1.6.0"
+  sha256 "1c0c46ff91fff2133d52510e31f446a51ca84d9506f5679b0a4c7c0825bca45a"
 
   url "https://github.com/OlixIgnacious/keyholdr/releases/download/v#{version}/Keyholdr-macOS-v#{version}.zip",
       verified: "github.com/OlixIgnacious/keyholdr/"
